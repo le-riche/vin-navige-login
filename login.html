@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vin Navige - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            text-align: center;
+            padding: 40px;
+        }
+        .logo {
+            max-width: 180px;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .instructions {
+            background-color: #e6f2ff;
+            border: 1px solid #b3d1ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+        input[type="text"], input[type="password"] {
+            padding: 10px;
+            width: 250px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <img class="logo" src="vin_navige_logo.png" alt="Vin Navige Logo">
+    <div class="message">Antre nan <strong>Bazelais Économie Plus</strong> la pou ka achte tikè pou konekte.</div>
+
+    <div class="instructions">
+        <p><strong>Kijan pou konekte:</strong></p>
+        <ol>
+            <li>Mete <strong>non itilizatè ou</strong> (egzanp: <code>vizite</code>)</li>
+            <li>Mete <strong>modpas ou</strong> (egzanp: <code>123456</code>)</li>
+            <li>Peze bouton <strong>Login</strong></li>
+        </ol>
+    </div>
+
+    <form name="login" action="$(link-login-only)" method="post">
+        <input type="hidden" name="dst" value="$(link-orig)">
+        <input type="hidden" name="popup" value="true">
+        <input type="text" name="username" placeholder="Non itilizatè" /><br>
+        <input type="password" name="password" placeholder="Modpas" /><br>
+        <input type="submit" value="Login" />
+    </form>
+</body>
+</html>
